@@ -1,0 +1,6 @@
+C:\Users\guada\OneDrive\Escritorio\PresentacionTienda\EntidadesTienda\bin\Debug\EntidadesTienda.dll
+C:\Users\guada\OneDrive\Escritorio\PresentacionTienda\EntidadesTienda\bin\Debug\EntidadesTienda.pdb
+C:\Users\guada\OneDrive\Escritorio\PresentacionTienda\EntidadesTienda\obj\Debug\EntidadesTienda.csproj.AssemblyReference.cache
+C:\Users\guada\OneDrive\Escritorio\PresentacionTienda\EntidadesTienda\obj\Debug\EntidadesTienda.csproj.CoreCompileInputs.cache
+C:\Users\guada\OneDrive\Escritorio\PresentacionTienda\EntidadesTienda\obj\Debug\EntidadesTienda.dll
+C:\Users\guada\OneDrive\Escritorio\PresentacionTienda\EntidadesTienda\obj\Debug\EntidadesTienda.pdb
