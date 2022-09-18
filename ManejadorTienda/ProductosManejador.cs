@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AccesoDatosTienda;
-using EntidadesTienda;
 
 
 namespace ManejadorTienda
@@ -22,5 +21,10 @@ namespace ManejadorTienda
         {
             _accesoDatos.GuardarProductos(productos);
         }
+        public void EliminarUsuarios(int idproducto)
+        {
+            _accesoDatos.EliminarProducto(idproducto);
+        }
+
     }
 }

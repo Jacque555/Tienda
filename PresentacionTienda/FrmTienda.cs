@@ -22,6 +22,11 @@ namespace PresentacionTienda
             InitializeComponent();
             _productosManejador = new ProductosManejador();
         }
+        private void EliminarProducto()
+        {
+            var idproducto = dtvTienda.CurrentRow.Cells["idproducto"].Value.ToString();
+            _productosManejador.EliminarUsuarios(Convert.ToInt32(idproducto));
+        }
         private void GuardarProducto()
         {
             Productos productos = new Productos();
@@ -35,7 +40,8 @@ namespace PresentacionTienda
         {
             dtvTienda.DataSource = _productosManejador.GetProductos(dato);
         }
-        private void ControlarBotones(bool nuevo, bool guardar, bool cancelar, bool eliminar, bool salir)
+        private void ControlarBotones(bool nuevo, bool guardar,
+            bool cancelar, bool eliminar, bool salir)
         {
             btnNuevo.Enabled = nuevo;
             btnGuardar.Enabled = guardar;
@@ -124,6 +130,24 @@ namespace PresentacionTienda
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             LlenarProducto(txtBuscar.Text);
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Deseas eliminar este registro?", "Eliminar Usuario", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    EliminarProducto();
+                    LlenarProducto("");
+                    MessageBox.Show("Se elimino correctamente");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ocurrio un error al intentar eliminar");
+
+                }
+            }
         }
     }
 }

@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AccesoDatosTienda
 {
@@ -19,6 +16,11 @@ namespace AccesoDatosTienda
         {
             string consulta = string.Format("insert into producto values({0},'{1}','{2}',{3})",
                 productos.Idproducto, productos.Nombre, productos.Descripcion, productos.Precio);
+            con.EjecutarConsulta(consulta);
+        }
+        public void EliminarProducto(int idproducto)
+        {
+            string consulta = string.Format("Delete from producto where idproducto = {0}", idproducto);
             con.EjecutarConsulta(consulta);
         }
         public List<Productos> GetProductos(string dato)
